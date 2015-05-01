@@ -1,0 +1,1 @@
+java -Djava.net.preferIPv4Stack=true -cp .;jar\carapaca.jar;jar\Library.jar;jar\sqlitejdbc-v056.jar Client.Carapaca root@192.168.1.66:12345 docs\clientRSA.key 12345
