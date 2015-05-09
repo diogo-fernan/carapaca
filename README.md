@@ -8,7 +8,7 @@
 
 *carapaca* was developed with the [Java Cryptography Architecture (JCA)](http://docs.oracle.com/javase/7/docs/technotes/guides/security/crypto/CryptoSpec.html) and the Java Cryptography Extension (JCE), which implement many security functions in the Java Development Kit (JDK). At the time, *carapaca* was written with JDK version 1.7.0_03.
 
-The server side of *carapaca* is called *carapacad*. It spawns a thread for each connecting user and stores user authentication information in a local [SQLite](http://www.sqlite.org/) database.    At the time, it was used the [SQLite JDBC driver](https://bitbucket.org/xerial/sqlite-jdbc/) with version 0.56.
+The server side of *carapaca* is called *carapacad*. It spawns a thread for each connecting user and stores user authentication information in a local [SQLite](http://www.sqlite.org/) database. At the time, it was used the [SQLite JDBC driver](https://bitbucket.org/xerial/sqlite-jdbc/) with version 0.56.
 
 *carapacad* depicts a functionality to generate an RSA key pair needed for running the server, which accepts it as input argument along with the desired listening port (*e.g.*, 22 or some other binding port). The client application also uses a local SQLite database to store key information of the servers to which it connects to. The user password is only requested by the server after the protocol suite is negotiated and after the session keys are exchanged. Once the user is successfully authenticated, a shell is spawned where commands issued are passed onto the remote Linux `/bin/sh/` or Windows `cmd.exe` shells. The command output is captured at the remote host and is sent back to the client, pretty printing the data to the command line interface.
 
