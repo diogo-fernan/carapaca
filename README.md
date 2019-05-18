@@ -14,3 +14,6 @@ The server side of *carapaca* is called *carapacad*. It spawns a thread for each
 
 The program execution entry points for the client and server applications are respectively defined in `client/Client/Carapaca.java` and in `server/Server/Carapacad.java`. The `Library` folder included in both applications contains common code. The software package is also bundled with compilation and execution scripts for both the server and client applications.
 
+# Author
+
+[@dfernan__](https://twitter.com/dfernan__)
